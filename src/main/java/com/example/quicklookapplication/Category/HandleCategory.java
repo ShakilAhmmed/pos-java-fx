@@ -55,10 +55,12 @@ public class HandleCategory implements Initializable {
 
     public void handleMouseAction(javafx.scene.input.MouseEvent mouseEvent) {
         Category category = categoryTableView.getSelectionModel().getSelectedItem();
-        categoryId.setText("" + category.getId());
-        categoryName.setText(category.getCategoryName());
-        categoryDescription.setText(category.getCategoryDescription());
-        categoryStatus.setText(category.getCategoryStatus());
+        if (category != null) {
+            categoryId.setText("" + category.getId());
+            categoryName.setText(category.getCategoryName());
+            categoryDescription.setText(category.getCategoryDescription());
+            categoryStatus.setText(category.getCategoryStatus());
+        }
     }
 
 
