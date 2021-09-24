@@ -140,6 +140,7 @@ public class HandleCategory implements Initializable {
     private void destroyCategory() {
         String query = "DELETE FROM categories WHERE id=" + categoryId.getText();
         executeQuery(query);
+        clearForm();
         showCategories();
     }
 

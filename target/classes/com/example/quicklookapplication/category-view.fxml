@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleMouseAction" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quicklookapplication.Category.HandleCategory">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleMouseAction" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #fad390;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quicklookapplication.Category.HandleCategory">
     <children>
         <VBox layoutX="31.0" layoutY="50.0" prefHeight="436.0" prefWidth="101.0" spacing="22.0">
             <children>
@@ -21,7 +21,7 @@
                 <TextField fx:id="categoryStatus" />
             </children>
         </VBox>
-        <TableView fx:id="categoryTableView" layoutX="418.0" layoutY="50.0" onMouseClicked="#handleMouseAction" prefHeight="342.0" prefWidth="379.0" style="-fx-background-color: #bdc3c7; -fx-border-color: #74b9ff;">
+        <TableView fx:id="categoryTableView" layoutX="418.0" layoutY="50.0" onMouseClicked="#handleMouseAction" prefHeight="342.0" prefWidth="379.0" style="-fx-background-color: #60a3bc; -fx-border-color: #74b9ff;">
             <columns>
                 <TableColumn fx:id="tableId" prefWidth="53.0" text="ID" />
                 <TableColumn fx:id="tableCategoryName" prefWidth="97.0" text="NAME" />
