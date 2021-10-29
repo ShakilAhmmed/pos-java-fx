@@ -32,5 +32,6 @@
         <Button fx:id="addCategory" layoutX="132.0" layoutY="367.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="75.0" style="-fx-background-color: #2ecc71;" text="ADD" />
         <Button fx:id="editCategory" layoutX="235.0" layoutY="367.0" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: #3498db;" text="UPDATE" />
         <Button fx:id="deleteCategory" layoutX="334.0" layoutY="367.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="75.0" style="-fx-background-color: #e74c3c;" text="DELETE" />
+      <Button fx:id="goBackToHomePage" layoutX="365.0" layoutY="466.0" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: #2ecc71;" text="Go To Home Page" />
     </children>
 </AnchorPane>

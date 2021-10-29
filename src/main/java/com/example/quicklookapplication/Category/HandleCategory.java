@@ -1,14 +1,19 @@
 package com.example.quicklookapplication.Category;
 
+import com.example.quicklookapplication.HelloApplication;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import org.w3c.dom.events.MouseEvent;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -41,16 +46,29 @@ public class HandleCategory implements Initializable {
     private Button editCategory;
     @FXML
     private Button deleteCategory;
+    @FXML
+    private Button goBackToHomePage;
 
     @FXML
-    protected void handleButtonAction(ActionEvent event) {
+    protected void handleButtonAction(ActionEvent event) throws IOException {
         if (event.getSource() == addCategory) {
             insertCategory();
         } else if (event.getSource() == editCategory) {
             updateCategory();
         } else if (event.getSource() == deleteCategory) {
             destroyCategory();
+        } else if (event.getSource() == goBackToHomePage) {
+            goBackToHomePage(event);
         }
+    }
+
+    public void goBackToHomePage(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("home-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 900, 600);
+        Stage primaryStage = (Stage) goBackToHomePage.getScene().getWindow();
+        primaryStage.setTitle("Category");
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 
     public void handleMouseAction(javafx.scene.input.MouseEvent mouseEvent) {
