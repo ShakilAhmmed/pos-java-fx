@@ -43,8 +43,8 @@ public class HandleLogin implements Initializable {
     }
 
     public void goBackToHomePage(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("home-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 900, 600);
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login-reg-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         Stage primaryStage = (Stage) goBackToHomePage.getScene().getWindow();
         primaryStage.setTitle("Home");
         primaryStage.setScene(scene);
@@ -87,7 +87,7 @@ public class HandleLogin implements Initializable {
 
     private void clearForm(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("home-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 900, 600);
+        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         Stage primaryStage = (Stage) goBackToHomePage.getScene().getWindow();
         primaryStage.setTitle("Category");
         primaryStage.setScene(scene);

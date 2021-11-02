@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleMouseAction" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #fad390;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quicklookapplication.Category.HandleCategory">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleMouseAction" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #f6b93b;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quicklookapplication.Category.HandleCategory">
     <children>
         <VBox layoutX="31.0" layoutY="50.0" prefHeight="436.0" prefWidth="101.0" spacing="22.0">
             <children>
@@ -15,13 +16,25 @@
         </VBox>
         <VBox layoutX="132.0" layoutY="50.0" prefHeight="295.0" prefWidth="277.0" spacing="14.0">
             <children>
-                <TextField fx:id="categoryId" />
-                <TextField fx:id="categoryName" />
-                <TextField fx:id="categoryDescription" />
-                <TextField fx:id="categoryStatus" />
+                <TextField fx:id="categoryId">
+               <effect>
+                  <Glow />
+               </effect></TextField>
+                <TextField fx:id="categoryName">
+               <effect>
+                  <Glow />
+               </effect></TextField>
+                <TextField fx:id="categoryDescription">
+               <effect>
+                  <Glow />
+               </effect></TextField>
+                <TextField fx:id="categoryStatus">
+               <effect>
+                  <Glow />
+               </effect></TextField>
             </children>
         </VBox>
-        <TableView fx:id="categoryTableView" layoutX="418.0" layoutY="50.0" onMouseClicked="#handleMouseAction" prefHeight="342.0" prefWidth="379.0" style="-fx-background-color: #60a3bc; -fx-border-color: #74b9ff;">
+        <TableView fx:id="categoryTableView" layoutX="418.0" layoutY="50.0" onMouseClicked="#handleMouseAction" prefHeight="342.0" prefWidth="379.0" style="-fx-background-color: #dff9fb; -fx-border-color: #74b9ff;">
             <columns>
                 <TableColumn fx:id="tableId" prefWidth="53.0" text="ID" />
                 <TableColumn fx:id="tableCategoryName" prefWidth="97.0" text="NAME" />

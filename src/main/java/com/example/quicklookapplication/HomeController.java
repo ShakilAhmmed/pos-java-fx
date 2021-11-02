@@ -38,7 +38,7 @@ public class HomeController implements Initializable {
 
     public void categoryMenu(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("category-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 900, 600);
+        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         Stage primaryStage = (Stage) categoryMenu.getScene().getWindow();
         primaryStage.setTitle("Category");
         primaryStage.setScene(scene);
@@ -47,7 +47,7 @@ public class HomeController implements Initializable {
 
     public void brandMenu(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HomeController.class.getResource("reg-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 900, 600);
+        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         Stage primaryStage = (Stage) brandMenu.getScene().getWindow();
         primaryStage.setTitle("Register");
         primaryStage.setScene(scene);

@@ -56,7 +56,7 @@ public class MainController extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login-reg-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 900, 600);
+        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         stage.setTitle("QUICK LOOK!");
         stage.setScene(scene);
         stage.show();

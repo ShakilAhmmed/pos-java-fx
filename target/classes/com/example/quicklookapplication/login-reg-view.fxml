@@ -3,13 +3,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
-            prefWidth="800.0" style="-fx-background-color: #fad390;" xmlns="http://javafx.com/javafx/11.0.2"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quicklookapplication.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #f1c40f;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quicklookapplication.MainController">
     <children>
-        <Button fx:id="login" layoutX="202.0" layoutY="83.0" mnemonicParsing="false" onAction="#handleButtonAction"
-                prefHeight="42.0" prefWidth="137.0" text="Login"/>
-        <Button fx:id="register" layoutX="379.0" layoutY="83.0" mnemonicParsing="false" onAction="#handleButtonAction"
-                prefHeight="42.0" prefWidth="119.0" text="Register"/>
+        <Button fx:id="login" layoutX="347.0" layoutY="163.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="42.0" prefWidth="95.0" style="-fx-background-color: #2ecc71;" text="Login" />
+        <Button fx:id="register" layoutX="347.0" layoutY="245.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="42.0" prefWidth="95.0" style="-fx-background-color: #3498db;" text="Register" />
     </children>
 </AnchorPane>
