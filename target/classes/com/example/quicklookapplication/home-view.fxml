@@ -3,9 +3,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #fad390;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quicklookapplication.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #fad390;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quicklookapplication.HomeController">
    <children>
-      <Button fx:id="categoryMenu" layoutX="202.0" layoutY="83.0" mnemonicParsing="false" onAction="#handleCategoryButtonAction" prefHeight="42.0" prefWidth="137.0" text="Category" />
-      <Button fx:id="brandMenu" layoutX="379.0" layoutY="83.0" mnemonicParsing="false" onAction="#handleCategoryButtonAction" prefHeight="42.0" prefWidth="119.0" text="Brand" />
+      <Button fx:id="categoryMenu" layoutX="202.0" layoutY="83.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="42.0" prefWidth="137.0" text="Category" />
+      <Button fx:id="brandMenu" layoutX="379.0" layoutY="83.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="42.0" prefWidth="119.0" text="Brand" />
    </children>
 </AnchorPane>

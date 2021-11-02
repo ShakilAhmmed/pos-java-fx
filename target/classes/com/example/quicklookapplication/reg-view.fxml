@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleMouseAction" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #fad390;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quicklookapplication.Category.HandleCategory">
+    <children>
+        <VBox layoutX="190.0" layoutY="50.0" prefHeight="436.0" prefWidth="71.0" spacing="22.0">
+            <children>
+                <Label text="Email" />
+                <Label text="Password" />
+            </children>
+        </VBox>
+        <VBox layoutX="264.0" layoutY="50.0" prefHeight="295.0" prefWidth="323.0" spacing="14.0">
+            <children>
+                <TextField fx:id="email" />
+                <TextField fx:id="password" />
+            </children>
+        </VBox>
+        <Button fx:id="login" layoutX="347.0" layoutY="148.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="37.0" prefWidth="153.0" style="-fx-background-color: #3498db;" text="REGISTER" />
+      <Button fx:id="goBackToHomePage" layoutX="365.0" layoutY="466.0" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: #2ecc71;" text="Go To Home Page" />
+    </children>
+</AnchorPane>

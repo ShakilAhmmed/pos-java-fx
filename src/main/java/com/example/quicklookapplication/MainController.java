@@ -15,20 +15,36 @@ public class MainController extends Application {
     @FXML
     private Label welcomeText;
     @FXML
-    private Button categoryMenu;
+    private Button login;
     @FXML
-    private Button brandMenu;
+    private Button register;
 
     @FXML
     protected void onHelloButtonClick() {
         welcomeText.setText("Welcome to QUICK LOOK Application!");
     }
 
-    public void handleCategoryButtonAction(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("category-view.fxml"));
+    @FXML
+    public void handleButtonAction(ActionEvent event) throws IOException {
+        if (event.getSource() == login) {
+            login(event);
+        }
+    }
+
+    public void login(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 900, 600);
-        Stage primaryStage = (Stage) categoryMenu.getScene().getWindow();
-        primaryStage.setTitle("Category");
+        Stage primaryStage = (Stage) login.getScene().getWindow();
+        primaryStage.setTitle("Login");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    public void registerPage(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(MainController.class.getResource("reg-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 900, 600);
+        Stage primaryStage = (Stage) login.getScene().getWindow();
+        primaryStage.setTitle("Register");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
@@ -39,7 +55,7 @@ public class MainController extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("home-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login-reg-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 900, 600);
         stage.setTitle("QUICK LOOK!");
         stage.setScene(scene);
