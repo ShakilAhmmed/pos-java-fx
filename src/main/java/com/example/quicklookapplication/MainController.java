@@ -28,6 +28,8 @@ public class MainController extends Application {
     public void handleButtonAction(ActionEvent event) throws IOException {
         if (event.getSource() == login) {
             login(event);
+        } else if (event.getSource() == register) {
+            registerPage(event);
         }
     }
 
