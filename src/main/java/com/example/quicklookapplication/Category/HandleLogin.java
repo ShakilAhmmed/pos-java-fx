@@ -29,6 +29,8 @@ public class HandleLogin implements Initializable {
     @FXML
     private Button login;
     @FXML
+    private Button register;
+    @FXML
     private Button goBackToHomePage;
 
     @FXML
@@ -37,6 +39,9 @@ public class HandleLogin implements Initializable {
             if (login()) {
                 clearForm(event);
             }
+        } else if (event.getSource() == register) {
+            register();
+            goToLogin(event);
         } else if (event.getSource() == goBackToHomePage) {
             goBackToHomePage(event);
         }
@@ -83,6 +88,22 @@ public class HandleLogin implements Initializable {
         System.out.println(result);
         return result;
 
+    }
+
+    private void register() {
+        String query = "INSERT INTO `users`(`email`, `password`) VALUES (" +
+                "'" + email.getText() + "','" + password.getText() + "')";
+        System.out.println("query" + query);
+        executeQuery(query);
+    }
+
+    private void goToLogin(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+        Stage primaryStage = (Stage) goBackToHomePage.getScene().getWindow();
+        primaryStage.setTitle("Category");
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 
     private void clearForm(ActionEvent event) throws IOException {

@@ -46,10 +46,10 @@ public class HomeController implements Initializable {
     }
 
     public void brandMenu(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HomeController.class.getResource("reg-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HomeController.class.getResource("brand-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         Stage primaryStage = (Stage) brandMenu.getScene().getWindow();
-        primaryStage.setTitle("Register");
+        primaryStage.setTitle("Brands");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
