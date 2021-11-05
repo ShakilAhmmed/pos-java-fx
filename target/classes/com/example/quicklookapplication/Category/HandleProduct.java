@@ -99,7 +99,8 @@ public class HandleProduct implements Initializable {
         Product product = (Product)this.productTableView.getSelectionModel().getSelectedItem();
         if (product != null) {
             this.productId.setText(product.getId().makeConcatWithConstants<invokedynamic>(product.getId()));
-            this.productName.setText(product.getProductName());
+            this.categoryId.setText(product.getCategoryId());
+            this.brandId.setText(product.getBrandId());
             this.productName.setText(product.getProductName());
             this.productDescription.setText(product.getProductDescription());
             this.productStatus.setText(product.getProductStatus());
@@ -158,7 +159,7 @@ public class HandleProduct implements Initializable {
     private void insertProduct() {
         String var10000 = this.productName.getText();
         String query = "INSERT INTO `products`(`category_id`, `brand_id`, `name`, `description`, `purchase_price`, `sale_price`, `status`) VALUES ('" + var10000 + "','" + this.productDescription.getText() + this.productPurchasePrice.getText() + this.productSalePrice.getText() + "','" + this.productStatus.getText() + "')";
-        System.out.println("query" + query);
+        System.out.println("query " + query);
         this.executeQuery(query);
         this.clearForm();
         this.showProducts();
@@ -166,7 +167,7 @@ public class HandleProduct implements Initializable {
 
     private void updateProduct() {
         String var10000 = this.productName.getText();
-        String query = "UPDATE `products` SET  `category_id`='" + this.categoryId.getText() + "',`brand_id`='" + this.brandId +"',`name`='" + var10000 + "',`description`='" + this.productDescription.getText() + "',`purchase_price`='" + this.productPurchasePrice.getText() + "',`sale_price`='" + this.productSalePrice.getText() + "',`status`='" + this.productStatus.getText() + "' WHERE id=" + this.productId.getText();
+        String query = "UPDATE `products` SET  `category_id`='" + this.categoryId.getText() + "',`brand_id`='" + this.brandId.getText() +"',`name`='" + var10000 + "',`description`='" + this.productDescription.getText() + "',`purchase_price`='" + this.productPurchasePrice.getText() + "',`sale_price`='" + this.productSalePrice.getText() + "',`status`='" + this.productStatus.getText() + "' WHERE id=" + this.productId.getText();
         this.executeQuery(query);
         this.clearForm();
         this.showProducts();
@@ -195,7 +196,7 @@ public class HandleProduct implements Initializable {
             Statement statement = connection.createStatement();
             statement.executeUpdate(query);
         } catch (Exception var5) {
-            System.out.println("Error" + var5.getMessage());
+            System.out.println("Error " + var5.getMessage());
             var5.printStackTrace();
         }
 
