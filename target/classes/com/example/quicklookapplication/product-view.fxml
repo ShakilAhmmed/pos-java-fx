@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleMouseAction" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #f6b93b;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quicklookapplication.Product.HandleProduct">
+    <children>
+        <VBox layoutX="31.0" layoutY="50.0" prefHeight="436.0" prefWidth="101.0" spacing="22.0">
+            <children>
+                <Label text="ID" />
+                <Label text="Category" />
+                <Label text="Brand" />
+                <Label lineSpacing="3.0" text="Name" />
+                <Label text="Description" />
+                <Label text="Purchase Price" />
+                <Label text="Sale Price" />
+                <Label text="Status" />
+            </children>
+        </VBox>
+        <VBox layoutX="132.0" layoutY="50.0" prefHeight="295.0" prefWidth="277.0" spacing="14.0">
+            <children>
+                <TextField fx:id="productId">
+               <effect>
+                  <Glow />
+               </effect></TextField>
+                <TextField fx:id="productCategoryId">
+                    <effect>
+                        <Glow />
+                    </effect></TextField>
+                <TextField fx:id="productBrandId">
+                    <effect>
+                        <Glow />
+                    </effect></TextField>
+                <TextField fx:id="productName">
+               <effect>
+                  <Glow />
+               </effect></TextField>
+                <TextField fx:id="productDescription">
+               <effect>
+                  <Glow />
+               </effect></TextField>
+                <TextField fx:id="productPurchasePrice">
+                    <effect>
+                        <Glow />
+                    </effect></TextField>
+                <TextField fx:id="productSalePrice">
+                    <effect>
+                        <Glow />
+                    </effect></TextField>
+                <TextField fx:id="productStatus">
+               <effect>
+                  <Glow />
+               </effect></TextField>
+            </children>
+        </VBox>
+        <TableView fx:id="productTableView" layoutX="418.0" layoutY="50.0" onMouseClicked="#handleMouseAction" prefHeight="342.0" prefWidth="379.0" style="-fx-background-color: #dff9fb; -fx-border-color: #74b9ff;">
+            <columns>
+                <TableColumn fx:id="tableId" prefWidth="53.0" text="ID" />
+                <TableColumn fx:id="tableProductName" prefWidth="97.0" text="NAME" />
+                <TableColumn fx:id="tableProductDesc" prefWidth="137.0" text="DESC" />
+                <TableColumn fx:id="tableProductPurchasePrice" prefWidth="137.0" text="PurchasePrice" />
+                <TableColumn fx:id="tableProductSalePrice" prefWidth="137.0" text="SalePrice" />
+                <TableColumn fx:id="tableProductStatus" prefWidth="88.0" text="STATUS" />
+            </columns>
+        </TableView>
+        <Button fx:id="addProduct" layoutX="132.0" layoutY="367.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="75.0" style="-fx-background-color: #2ecc71;" text="ADD" />
+        <Button fx:id="editProduct" layoutX="235.0" layoutY="367.0" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: #3498db;" text="UPDATE" />
+        <Button fx:id="deleteProduct" layoutX="334.0" layoutY="367.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="75.0" style="-fx-background-color: #e74c3c;" text="DELETE" />
+      <Button fx:id="goBackToHomePage" layoutX="365.0" layoutY="466.0" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: #2ecc71;" text="Go To Home Page" />
+    </children>
+</AnchorPane>
