@@ -3,7 +3,7 @@
 // (powered by FernFlower decompiler)
 //
 
-package com.example.quicklookapplication.Product;
+package com.example.quicklookapplication.Category;
 
 import com.example.quicklookapplication.HelloApplication;
 import java.io.IOException;

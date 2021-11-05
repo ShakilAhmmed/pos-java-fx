@@ -3,19 +3,19 @@
 // (powered by FernFlower decompiler)
 //
 
-package com.example.quicklookapplication.Product;
+package com.example.quicklookapplication.Category;
 
 public class Product {
     private int id;
-    private String categoryId;
-    private String brandId;
+    private int categoryId;
+    private int brandId;
     private String productName;
     private String productDescription;
     private String productPurchasePrice;
     private String productSalePrice;
     private String productStatus;
 
-    public Product(int id, String categoryId, String brandId, String productName, String productDescription, String productPurchasePrice, String productSalePrice, String productStatus) {
+    public Product(int id, int categoryId, int brandId, String productName, String productDescription, String productPurchasePrice, String productSalePrice, String productStatus) {
         this.id = id;
         this.categoryId = categoryId;
         this.brandId = brandId;
