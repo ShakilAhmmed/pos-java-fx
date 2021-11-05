@@ -7,15 +7,15 @@ package com.example.quicklookapplication.Category;
 
 public class Product {
     private int id;
-    private int categoryId;
-    private int brandId;
+    private String categoryId;
+    private String brandId;
     private String productName;
     private String productDescription;
     private String productPurchasePrice;
     private String productSalePrice;
     private String productStatus;
 
-    public Product(int id, int categoryId, int brandId, String productName, String productDescription, String productPurchasePrice, String productSalePrice, String productStatus) {
+    public Product(int id, String categoryId, String brandId, String productName, String productDescription, String productPurchasePrice, String productSalePrice, String productStatus) {
         this.id = id;
         this.categoryId = categoryId;
         this.brandId = brandId;
@@ -34,19 +34,19 @@ public class Product {
         this.id = id;
     }
 
-    public int getCategoryId() {
+    public String getCategoryId() {
         return this.categoryId;
     }
 
-    public void setCategoryId(int categoryId) {
+    public void setCategoryId(String categoryId) {
         this.categoryId = categoryId;
     }
 
-    public int getBrandId() {
+    public String getBrandId() {
         return this.brandId;
     }
 
-    public void setBrandId(int brandId) {
+    public void setBrandId(String brandId) {
         this.brandId = brandId;
     }
 
