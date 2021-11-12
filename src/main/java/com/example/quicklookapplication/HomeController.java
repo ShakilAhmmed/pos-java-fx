@@ -23,6 +23,9 @@ public class HomeController implements Initializable {
     private Button brandMenu;
     @FXML
     private Button productMenu;
+    @FXML
+    private Button purchaseMenu;
+
 
     @FXML
     protected void onHelloButtonClick() {
@@ -37,6 +40,8 @@ public class HomeController implements Initializable {
             brandMenu(event);
         } else if (event.getSource() == productMenu) {
             productMenu(event);
+        } else if (event.getSource() == purchaseMenu) {
+            purchaseMenu(event);
         }
     }
 
@@ -63,6 +68,15 @@ public class HomeController implements Initializable {
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         Stage primaryStage = (Stage) categoryMenu.getScene().getWindow();
         primaryStage.setTitle("Category");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    public void purchaseMenu(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("purchase-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+        Stage primaryStage = (Stage) purchaseMenu.getScene().getWindow();
+        primaryStage.setTitle("Purchase");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
