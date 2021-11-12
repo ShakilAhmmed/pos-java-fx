@@ -27,7 +27,8 @@ public class HomeController implements Initializable {
     private Button purchaseMenu;
     @FXML
     private Button productReport;
-
+    @FXML
+    private Button purchaseReport;
 
     @FXML
     protected void onHelloButtonClick() {
@@ -46,6 +47,8 @@ public class HomeController implements Initializable {
             purchaseMenu(event);
         } else if (event.getSource() == productReport) {
             productReport(event);
+        } else if (event.getSource() == purchaseReport) {
+            purchaseReport(event);
         }
     }
 
@@ -90,6 +93,15 @@ public class HomeController implements Initializable {
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         Stage primaryStage = (Stage) productReport.getScene().getWindow();
         primaryStage.setTitle("Product Report");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    public void purchaseReport(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("purchase-report-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+        Stage primaryStage = (Stage) productReport.getScene().getWindow();
+        primaryStage.setTitle("Purchase Report");
         primaryStage.setScene(scene);
         primaryStage.show();
     }

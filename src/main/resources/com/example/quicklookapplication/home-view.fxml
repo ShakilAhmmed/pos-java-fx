@@ -14,7 +14,7 @@
       <Button fx:id="salesMenu" layoutX="202.0" layoutY="258.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="42.0" prefWidth="137.0" style="-fx-background-color: #10ac84;" text="Sales" />
       <Button fx:id="productReport" layoutX="379.0" layoutY="258.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="42.0" prefWidth="137.0" style="-fx-background-color: #82ccdd;" text="Product Report" />
       <Button fx:id="salesReport" layoutX="202.0" layoutY="352.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="42.0" prefWidth="137.0" style="-fx-background-color: #b8e994;" text="Sales Report" />
-      <Button fx:id="stockReport" layoutX="379.0" layoutY="352.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="42.0" prefWidth="137.0" style="-fx-background-color: #10ac84;" text="Stock Report" />
+      <Button fx:id="purchaseReport" layoutX="379.0" layoutY="352.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="42.0" prefWidth="137.0" style="-fx-background-color: #10ac84;" text="Purchase Report" />
    </children>
    <cursor>
       <Cursor fx:constant="OPEN_HAND" />
