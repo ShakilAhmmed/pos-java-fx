@@ -24,11 +24,11 @@
                <effect>
                   <Glow />
                </effect></TextField>
-                <TextField fx:id="productCategoryId">
+                <TextField fx:id="categoryId">
                     <effect>
                         <Glow />
                     </effect></TextField>
-                <TextField fx:id="productBrandId">
+                <TextField fx:id="brandId">
                     <effect>
                         <Glow />
                     </effect></TextField>

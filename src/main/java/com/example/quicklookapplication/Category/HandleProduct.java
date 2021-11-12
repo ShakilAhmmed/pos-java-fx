@@ -35,13 +35,13 @@ public class HandleProduct implements Initializable {
     @FXML
     private TextField productId;
     @FXML
-    private TextField categoryId;
-    @FXML
-    private TextField brandId;
-    @FXML
     private TextField productName;
     @FXML
     private TextField productDescription;
+    @FXML
+    private TextField categoryId;
+    @FXML
+    private TextField brandId;
     @FXML
     private TextField productPurchasePrice;
     @FXML
@@ -106,9 +106,10 @@ public class HandleProduct implements Initializable {
             brandId.setText(product.getBrandId());
             productName.setText(product.getProductName());
             productDescription.setText(product.getProductDescription());
+            productPurchasePrice.setText(product.getProductPurchasePrice());
+            productSalePrice.setText(product.getProductSalePrice());
             productStatus.setText(product.getProductStatus());
         }
-
     }
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -161,15 +162,9 @@ public class HandleProduct implements Initializable {
     }
 
     private void insertProduct() {
-        String query = "INSERT INTO `products`(`name`, `description`, `category_id`,`brand_id`,`purchase_price`,`sale_price`,`status`) VALUES (" +
-                "'" + productName.getText() + "','"
-                + productDescription.getText() + "','"
-                + categoryId.getText() + "'" +
-                "'" + brandId.getText() + "'" +
-                "'" + productPurchasePrice.getText() + "'" +
-                "'" + productSalePrice.getText() + "'" +
-                "'" + productStatus.getText() + "'" +
-                ")";
+        String query = "INSERT INTO `products` (`name`, `description`, `category_id`, `brand_id`, `purchase_price`, `sale_price`, `status`) VALUES (" +
+                "'" + productName.getText() + "','" + productDescription.getText() + "','" + categoryId.getText() + "','" + brandId.getText()  + "','" + productPurchasePrice.getText() + "','" + productSalePrice.getText() + "','" + productStatus.getText() + "'" + ")";
+
         System.out.println("query " + query);
         this.executeQuery(query);
         this.clearForm();
@@ -177,8 +172,7 @@ public class HandleProduct implements Initializable {
     }
 
     private void updateProduct() {
-        String var10000 = this.productName.getText();
-        String query = "UPDATE `products` SET  `category_id`='" + this.categoryId.getText() + "',`brand_id`='" + this.brandId.getText() + "',`name`='" + var10000 + "',`description`='" + this.productDescription.getText() + "',`purchase_price`='" + this.productPurchasePrice.getText() + "',`sale_price`='" + this.productSalePrice.getText() + "',`status`='" + this.productStatus.getText() + "' WHERE id=" + this.productId.getText();
+        String query = "UPDATE `products` SET `name`='" + this.productName.getText() + "', `category_id`='" + this.categoryId.getText() + "',`brand_id`='" + this.brandId.getText() + "',`description`='" + this.productDescription.getText() + "',`purchase_price`='" + this.productPurchasePrice.getText() + "',`sale_price`='" + this.productSalePrice.getText() + "',`status`='" + this.productStatus.getText() + "' WHERE id=" + this.productId.getText();
         this.executeQuery(query);
         this.clearForm();
         this.showProducts();
@@ -197,6 +191,8 @@ public class HandleProduct implements Initializable {
         this.brandId.setText((String) null);
         this.productName.setText((String) null);
         this.productDescription.setText((String) null);
+        this.productSalePrice.setText((String) null);
+        this.productPurchasePrice.setText((String) null);
         this.productStatus.setText((String) null);
     }
 
@@ -205,6 +201,7 @@ public class HandleProduct implements Initializable {
 
         try {
             Statement statement = connection.createStatement();
+            System.out.println("dd ");
             statement.executeUpdate(query);
         } catch (Exception var5) {
             System.out.println("Error " + var5.getMessage());
