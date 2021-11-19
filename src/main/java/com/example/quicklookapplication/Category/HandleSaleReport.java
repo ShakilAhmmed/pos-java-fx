@@ -29,30 +29,30 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
-public class HandlePurchaseReport implements Initializable {
+public class HandleSaleReport implements Initializable {
     @FXML
-    private TableView<PurchaseReport> purchaseReportView;
+    private TableView<SaleReport> saleReportView;
     @FXML
-    private TableColumn<PurchaseReport, Integer> tableId;
+    private TableColumn<SaleReport, Integer> tableId;
     @FXML
-    private TableColumn<PurchaseReport, String> tableProductName;
+    private TableColumn<SaleReport, String> tableProductName;
     @FXML
-    private TableColumn<PurchaseReport, String> tableProductCategory;
+    private TableColumn<SaleReport, String> tableProductCategory;
     @FXML
-    private TableColumn<PurchaseReport, String> tableProductBrand;
+    private TableColumn<SaleReport, String> tableProductBrand;
     @FXML
-    private TableColumn<PurchaseReport, String> tableProductPurchasePrice;
+    private TableColumn<SaleReport, String> tableProductPurchasePrice;
     @FXML
-    private TableColumn<PurchaseReport, String> tableProductSalePrice;
+    private TableColumn<SaleReport, String> tableProductSalePrice;
     @FXML
-    private TableColumn<PurchaseReport, String> tableProductPurchaseQuantity;
+    private TableColumn<SaleReport, String> tableProductSaleQuantity;
     @FXML
-    private TableColumn<PurchaseReport, String> tableProductDate;
+    private TableColumn<SaleReport, String> tableProductDate;
 
     @FXML
     private Button goBackToHomePage;
 
-    public HandlePurchaseReport() {
+    public HandleSaleReport() {
     }
 
     @FXML
@@ -92,17 +92,17 @@ public class HandlePurchaseReport implements Initializable {
         }
     }
 
-    public ObservableList<PurchaseReport> getProductList() {
-        ObservableList<PurchaseReport> productList = FXCollections.observableArrayList();
+    public ObservableList<SaleReport> getProductList() {
+        ObservableList<SaleReport> productList = FXCollections.observableArrayList();
         Connection connection = this.getConnection();
-        String query = "SELECT * FROM `products` INNER JOIN categories ON categories.id = products.category_id INNER JOIN brands ON brands.id = products.brand_id INNER JOIN purchases ON purchases.product_id = products.id";
+        String query = "SELECT * FROM `products` INNER JOIN categories ON categories.id = products.category_id INNER JOIN brands ON brands.id = products.brand_id INNER JOIN sales ON sales.product_id = products.id";
 
         try {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(query);
 
             while (resultSet.next()) {
-                PurchaseReport product = new PurchaseReport(
+                SaleReport product = new SaleReport(
                         resultSet.getInt("id"),
                         resultSet.getString("name"),
                         resultSet.getString("category_name"),
@@ -123,17 +123,17 @@ public class HandlePurchaseReport implements Initializable {
     }
 
     public void showProducts() {
-        ObservableList<PurchaseReport> list = this.getProductList();
+        ObservableList<SaleReport> list = this.getProductList();
         this.tableId.setCellValueFactory(new PropertyValueFactory("Id"));
         this.tableProductName.setCellValueFactory(new PropertyValueFactory("ProductName"));
         this.tableProductCategory.setCellValueFactory(new PropertyValueFactory("Category"));
         this.tableProductBrand.setCellValueFactory(new PropertyValueFactory("Brand"));
         this.tableProductPurchasePrice.setCellValueFactory(new PropertyValueFactory("ProductPurchasePrice"));
         this.tableProductSalePrice.setCellValueFactory(new PropertyValueFactory("ProductSalePrice"));
-        this.tableProductPurchaseQuantity.setCellValueFactory(new PropertyValueFactory("ProductQuantity"));
+        this.tableProductSaleQuantity.setCellValueFactory(new PropertyValueFactory("ProductQuantity"));
         this.tableProductDate.setCellValueFactory(new PropertyValueFactory("Date"));
-        this.purchaseReportView.setItems((ObservableList) null);
-        this.purchaseReportView.setItems(list);
+        this.saleReportView.setItems((ObservableList) null);
+        this.saleReportView.setItems(list);
     }
 
     private void executeQuery(String query) {
