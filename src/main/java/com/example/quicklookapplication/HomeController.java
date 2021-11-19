@@ -26,9 +26,13 @@ public class HomeController implements Initializable {
     @FXML
     private Button purchaseMenu;
     @FXML
+    private Button saleMenu;
+    @FXML
     private Button productReport;
     @FXML
     private Button purchaseReport;
+    @FXML
+    private Button saleReport;
 
     @FXML
     protected void onHelloButtonClick() {
@@ -45,10 +49,14 @@ public class HomeController implements Initializable {
             productMenu(event);
         } else if (event.getSource() == purchaseMenu) {
             purchaseMenu(event);
+        }else if (event.getSource() == saleMenu) {
+            saleMenu(event);
         } else if (event.getSource() == productReport) {
             productReport(event);
         } else if (event.getSource() == purchaseReport) {
             purchaseReport(event);
+        } else if (event.getSource() == saleReport) {
+            saleReport(event);
         }
     }
 
@@ -88,6 +96,16 @@ public class HomeController implements Initializable {
         primaryStage.show();
     }
 
+
+    public void saleMenu(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("sale-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+        Stage primaryStage = (Stage) saleMenu.getScene().getWindow();
+        primaryStage.setTitle("Sale");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
     public void productReport(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("product-report-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
@@ -102,6 +120,15 @@ public class HomeController implements Initializable {
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         Stage primaryStage = (Stage) productReport.getScene().getWindow();
         primaryStage.setTitle("Purchase Report");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    public void saleReport(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("sale-report-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+        Stage primaryStage = (Stage) saleReport.getScene().getWindow();
+        primaryStage.setTitle("Sale Report");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
