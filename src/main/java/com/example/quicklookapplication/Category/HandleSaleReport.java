@@ -29,7 +29,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
-public class HandlePurchaseReport implements Initializable {
+public class HandleSaleReport implements Initializable {
     @FXML
     private TableView<PurchaseReport> purchaseReportView;
     @FXML
@@ -52,7 +52,7 @@ public class HandlePurchaseReport implements Initializable {
     @FXML
     private Button goBackToHomePage;
 
-    public HandlePurchaseReport() {
+    public HandleSaleReport() {
     }
 
     @FXML

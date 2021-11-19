@@ -5,7 +5,7 @@
 
 package com.example.quicklookapplication.Category;
 
-public class PurchaseReport {
+public class SaleReport {
 
     private int id;
     private String productName;
@@ -16,7 +16,7 @@ public class PurchaseReport {
     private String productQuantity;
     private String date;
 
-    public PurchaseReport(int id,
+    public SaleReport(int id,
                           String productName,
                           String category,
                           String brand,

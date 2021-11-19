@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            onMouseClicked="#handleMouseAction" prefHeight="600.0" prefWidth="800.0"
+            style="-fx-background-color: #f6b93b;" xmlns="http://javafx.com/javafx/11.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.quicklookapplication.Category.HandlePurchaseReport">
+    <children>
+        <VBox layoutX="31.0" layoutY="50.0" prefHeight="436.0" prefWidth="101.0" spacing="22.0"/>
+        <VBox layoutX="132.0" layoutY="50.0" prefHeight="295.0" prefWidth="277.0" spacing="14.0"/>
+        <TableView fx:id="purchaseReportView" layoutX="-3.0" layoutY="50.0" onMouseClicked="#handleMouseAction"
+                   prefHeight="342.0" prefWidth="800.0"
+                   style="-fx-background-color: #dff9fb; -fx-border-color: #74b9ff;">
+            <columns>
+                <TableColumn fx:id="tableId" prefWidth="53.0" text="ID"/>
+                <TableColumn fx:id="tableProductName" prefWidth="93.0" text="NAME"/>
+                <TableColumn fx:id="tableProductCategory" minWidth="0.0" prefWidth="94.0" text="CATEGORY"/>
+                <TableColumn fx:id="tableProductBrand" prefWidth="78.0" text="BRAND"/>
+                <TableColumn fx:id="tableProductPurchasePrice" prefWidth="115.0" text="PURCHASE PRICE"/>
+                <TableColumn fx:id="tableProductSalePrice" prefWidth="98.0" text="SALE PRICE"/>
+                <TableColumn fx:id="tableProductDate" prefWidth="103.0" text="Date"/>
+                <TableColumn fx:id="tableProductPurchaseQuantity" prefWidth="164.0" text="PURCHASE QUANTITY"/>
+            </columns>
+        </TableView>
+        <Button fx:id="goBackToHomePage" layoutX="365.0" layoutY="466.0" mnemonicParsing="false"
+                onAction="#handleButtonAction" style="-fx-background-color: #2ecc71;" text="Go To Home Page"/>
+    </children>
+</AnchorPane>
